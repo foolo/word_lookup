@@ -1,12 +1,5 @@
 // @ts-check
 
-function initPage() {
-	let platformInfoDiv = document.getElementById("platformInfoDiv");
-	if (platformInfoDiv instanceof HTMLDivElement) {
-		platformInfoDiv.innerText = getIsMobile() ? "Mobile" : "Desktop";
-	}
-}
-
 /**
  * @returns {String} The text in the source word input box
  */
@@ -21,7 +14,6 @@ function getSourceText() {
 function getIsMobile() {
 	return window.innerWidth < 900;
 }
-
 
 function searchWiktionary() {
 	const sourceText = getSourceText();
