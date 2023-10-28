@@ -19,9 +19,7 @@ function getSourceText() {
  * @returns {boolean}
  */
 function getIsMobile() {
-	const url = new URL(location.href)
-	const platform = url.searchParams.get("platform")?.toLowerCase();
-	return platform === "mobile";
+	return window.innerWidth < 900;
 }
 
 
