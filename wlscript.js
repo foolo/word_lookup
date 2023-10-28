@@ -1,8 +1,10 @@
 // @ts-check
 
 function initPage() {
-	// todo mobile/desktop
-	console.log("initPage");
+	let platformInfoDiv = document.getElementById("platformInfoDiv");
+	if (platformInfoDiv instanceof HTMLDivElement) {
+		platformInfoDiv.innerText = getIsMobile() ? "Mobile" : "Desktop";
+	}
 }
 
 /**
